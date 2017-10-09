@@ -55,9 +55,9 @@ destination_subdirectories = []
 # check if resolution is specified first argument is default and value is file name
 # second argument is location of directory of icons to be resized
 if sys.argv.__len__() > 2:
-    input_resolution_value = sys.argv[0]
+    input_resolution_value = sys.argv[2] 
     if input_resolution_value.isdigit():
-        highest_resolution = input_resolution_value
+        highest_resolution = int(input_resolution_value)
     else:
         print("Enter correct resolution")
         print("using default hightest resolution")
