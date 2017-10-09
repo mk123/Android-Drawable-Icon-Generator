@@ -14,7 +14,7 @@ Pillow installation link : http://pillow.readthedocs.io/en/latest/installation.h
 
 ## Usage:
 ```
-$ python3 Generate.py <directory_location_of_icons_to_be_resized> <greatest_icon_resolution>(Optional)
+$ python3 GenerateIcons.py /path/to/icons/directory 192(Optional)<greatest_icon_resolution>
 ```
 ## Output:
 Resized images are generated within the source location of icons
