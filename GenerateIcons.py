@@ -10,16 +10,14 @@ def resize_image(input_image_path, file_name):
     for icon_ratio, icon_relative_location in zip(icon_size_ratio, icon_size_location):
         height = width = int(highest_resolution * (icon_ratio / icon_size_ratio[0]))
         resized_image = image.resize((height, width), Image.LANCZOS)
+        resized_icon_directory = destination_directory + os.sep + icon_relative_location
         if destination_subdirectories.__len__() == 0:
-            resized_icon_directory = destination_directory + os.sep + \
-                                     icon_relative_location
+        	resized_icon_location = resized_icon_directory + os.sep + file_name
         else:
-            resized_icon_directory = destination_directory + os.sep + \
-                                     icon_relative_location + os.sep + \
-                                     os.sep.join(destination_subdirectories)
+        	resized_icon_location = resized_icon_directory + os.sep + \
+        	 "_".join(destination_subdirectories) + "_" + file_name
         if not os.path.isdir(resized_icon_directory):
             os.makedirs(resized_icon_directory)
-        resized_icon_location = resized_icon_directory + os.sep + file_name
         resized_image.save(resized_icon_location, quality=90)
 
 
