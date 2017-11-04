@@ -1,11 +1,11 @@
 # Android Drawable Icon Generator
-This python code is used to geneate the drawaable icons for various screen sizes.
+This python code is used to geneate the drawable icons for various screen sizes.
 
 ## Requirements:
 #### Python3 
 Installation link : http://docs.python-guide.org/en/latest/starting/installation/
 #### Pillow Lib for python
-You can install pillow using pip.<br>
+Usually pillow lib is already installed in ubuntu but if you still face problem, then you can install pillow using pip.<br>
 ```
 $ pip install Pillow
 ```
